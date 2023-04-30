@@ -23,11 +23,6 @@ span {
  
 }
 
-#end-alert.disappear,
-.disappear {
-  display: none;
-}
-
 .fadeIn,
 #title1,
 #title2,

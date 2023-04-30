@@ -47,8 +47,6 @@ span {
 
   }
 .button {
-    cursor: pointer;
-    transform: scale(1.1);
     box-shadow: 0 0 20px 1px;
     position: sticky;
     left: 10px;
@@ -64,49 +62,11 @@ span {
     width: 150px;
   }
 
-#retry-btn:hover {
-    cursor: pointer;
-    filter: brightness(1.1);
-    transform: scale(1.05);
-  }
-
-  #end-alert.disappear,
-  .disappear {
-    display: none;
-  }
-  #game-container {
-    opacity: 1;
-    pointer-events: none;
-  }
-  span {
-    opacity: 0;
-    transition: all 1s ease;
-  }
-  .fade {
-    opacity: 1;
-  }
-  #results.container.no-transition {
-    transition: none;
-  }
-  #content1.fade-out,
-  #content2.fade-out,
-  #content3.fade-out,
-  .fade-out {
-    animation-name: fade-out;
-    animation-duration: 800ms;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 1px;
+}
 
 #alien{
   position: relative;

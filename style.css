@@ -1,42 +1,87 @@
 
-.background{
-    position:absolute;
-    object-fit:cover;
+#myVideo{
+    position:fixed;
+    right: 0;
     z-index: -1;
+    bottom: 0;
     min-width: 100%;
-    min-height: 100%
+    min-height: 100%;
 }
 
-span {
-    opacity: 0;
-    transition: all 1s ease;
-  }
+.header{
+  margin-top: 3em;
+}
+
+span{
+  opacity: 0;
+  transition: all 1s ease;
+}
+  
 .fade {
     opacity: 1;
-  } 
+} 
+#title1.fade-out,
+#title2.fade-out,
+#content1.fade-out,
+#content2.fade-out,
+#content3.fade-out,
+#content4.fade-out,
+.fade-out {
+    animation-name: fade-out;
+    animation-duration: 800ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 #end-alert.disappear,
 .disappear {
   display: none;
 }
 
-.fadeIn,
 #title1,
 #title2,
-#weapon{
+#weapon,
+#content1,
+#content2,
+#content3,
+#content4,
+.label,
+.score{
     margin-top: 0;
     padding-top: 0;
     justify-content: center;
     text-align: center;
-    font-size: 30;
+    font-size: 70px;
     color: beige;
-    font-family: cursive;
+    font-family: fantasy;
+}
+
+#win-result,
+#loss-result,
+#tie-result{
+    margin-top: 0;
+    padding-top: 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    color: beige;
+    font-family: fantasy;
 }
 
 #btn-container {
     position: relative;
-    margin-left: 350px;
+    margin-left: 10em;
+    top: 10em;
 
   }
 .button {
@@ -44,8 +89,8 @@ span {
     position: sticky;
     left: 10px;
     opacity: 0.6;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border: 1px solid white;
     margin: 75px;
     transition: all 0.4s ease;
@@ -57,23 +102,30 @@ span {
   box-shadow: 0 0 20px 1px;
 }
 .button img {
-    width: 150px;
-  }
+    width: 200px;
+    height: 200px;
+}
 
-
+.enemy img{
+  width: 350px;
+  height: 350px;
+}
 #alien{
   position: relative;
-  left: 1400px;
-  bottom :500px;
-  opacity: .4
+  justify-self: center;
+  left: 120em;
+  bottom: 46em;
+  opacity: .6
 }
+#results-container,
 #score-box,
 #score-container {
   display:flex;
   position: relative;
-  z-index: 1;
-  left: 800px;
-  bottom: 800px;
+  z-index: -1;
+  justify-content: center;
+  right: 7em;
+  bottom: 70em;
 }
 
 .label {
@@ -87,3 +139,7 @@ span {
   padding: 0px 40px;
   color: beige
 }
+
+.disappear {
+  display: none;
+} 
